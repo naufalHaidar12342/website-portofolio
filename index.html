@@ -2,14 +2,22 @@
 <html lang="en">
 
 <head>
-    <!-- google font -->
+    <!-- google font. usahakan dipanggil paling pertama-->
+    <!-- setelah tag <head> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <!-- bulma css -->
     <link type="text/css" rel="stylesheet" href="/assets/bulma/css/bulma.min.css">
+
+    <!-- uikit css -->
+    <!-- <link type="text/css" rel="stylesheet" href="assets/uikit-3.7/css/uikit.min.css"> -->
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Roboto', sans-serif;
         }
@@ -19,101 +27,158 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Website satu halaman berisi profil saya.">
-    <title>Document</title>
+    <title>Naufal Haidar</title>
 </head>
 
 <body>
     <!-- navbar -->
-
-    <!-- hero section/jumbotron -->
     <nav class="navbar is-link" role="navigation" aria-label="main navigation">
         <div class="container">
-
             <div class="navbar-brand is-uppercase">
-                <a class="navbar-item" href="">
+                <a class="navbar-item" href="index.html">
                     <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> -->
-                    naufal
-
+                    Naufal
                 </a>
 
-                <!-- mobile navbar -->
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <!-- hamburger menu untuk mobile device -->
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="navigation-bar">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </a>
             </div>
-            <div id="navbarBasicExample" class="navbar-menu">
+
+            <div id="navigation-bar" class="navbar-menu">
                 <div class="navbar-end">
-                    <a class="navbar-item">
-                        Home
+                    <a href="index.html" class="navbar-item">
+                        Beranda
                     </a>
 
-                    <a class="navbar-item">
-                        Documentation
+                    <a href="#tentang-saya" class="navbar-item">
+                        Tentang
                     </a>
-                    <!-- dropdown di dalam navbar -->
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
-                            More
-                        </a>
-
-                        <div class="navbar-dropdown">
-                            <a class="navbar-item">
-                                About
-                            </a>
-                            <a class="navbar-item">
-                                Jobs
-                            </a>
-                            <a class="navbar-item">
-                                Contact
-                            </a>
-                            <hr class="navbar-divider">
-                            <a class="navbar-item">
-                                Report an issue
-                            </a>
-                        </div>
-                    </div>
+                    <a href="#daftar-project" class="navbar-item">
+                        Karya
+                    </a>
                 </div>
-
-                <!-- <div class="navbar-end">
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <a class="button is-primary">
-                                <strong>Sign up</strong>
-                            </a>
-                            <a class="button is-light">Log in</a>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
-
     </nav>
+    <!-- akhir dari navbar -->
+
+    <!-- hero section/jumbotron -->
     <section class="hero is-link is-halfheight">
         <div class="hero-body">
             <div class="container has-text-centered ">
-
-                <img loading="lazy" class="mb-2" src="assets/img/DSC_0491.webp" width="300" height="300" style="width: 300px; height: 300px; border-radius: 50%;">
-
-                <p class="title">
-                    Half height hero
+                <!-- profile picture -->
+                <img loading="lazy" class="mb-2" src="assets/img/DSC_0491.webp" width="256" height="256"
+                    style="width: 256px; height: 256px; border-radius: 50%;">
+                <!-- nama -->
+                <p class="title is-capitalized pb-2">
+                    Naufal Haidar
                 </p>
+
+                <!-- profesi -->
                 <p class="subtitle">
-                    Half height subtitle
+                    Mahasiswa
                 </p>
             </div>
-            <!-- <div class="container has-text-centered">
+
+        </div>
+
+        <!-- motif gelombang -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#fff" fill-opacity="1"
+                d="M0,256L0,256L36.9,256L36.9,96L73.8,96L73.8,128L110.8,128L110.8,192L147.7,192L147.7,224L184.6,224L184.6,224L221.5,224L221.5,224L258.5,224L258.5,192L295.4,192L295.4,192L332.3,192L332.3,0L369.2,0L369.2,32L406.2,32L406.2,96L443.1,96L443.1,224L480,224L480,96L516.9,96L516.9,192L553.8,192L553.8,32L590.8,32L590.8,320L627.7,320L627.7,256L664.6,256L664.6,320L701.5,320L701.5,224L738.5,224L738.5,128L775.4,128L775.4,32L812.3,32L812.3,128L849.2,128L849.2,64L886.2,64L886.2,192L923.1,192L923.1,288L960,288L960,256L996.9,256L996.9,224L1033.8,224L1033.8,192L1070.8,192L1070.8,160L1107.7,160L1107.7,32L1144.6,32L1144.6,0L1181.5,0L1181.5,192L1218.5,192L1218.5,128L1255.4,128L1255.4,160L1292.3,160L1292.3,96L1329.2,96L1329.2,160L1366.2,160L1366.2,128L1403.1,128L1403.1,96L1440,96L1440,320L1403.1,320L1403.1,320L1366.2,320L1366.2,320L1329.2,320L1329.2,320L1292.3,320L1292.3,320L1255.4,320L1255.4,320L1218.5,320L1218.5,320L1181.5,320L1181.5,320L1144.6,320L1144.6,320L1107.7,320L1107.7,320L1070.8,320L1070.8,320L1033.8,320L1033.8,320L996.9,320L996.9,320L960,320L960,320L923.1,320L923.1,320L886.2,320L886.2,320L849.2,320L849.2,320L812.3,320L812.3,320L775.4,320L775.4,320L738.5,320L738.5,320L701.5,320L701.5,320L664.6,320L664.6,320L627.7,320L627.7,320L590.8,320L590.8,320L553.8,320L553.8,320L516.9,320L516.9,320L480,320L480,320L443.1,320L443.1,320L406.2,320L406.2,320L369.2,320L369.2,320L332.3,320L332.3,320L295.4,320L295.4,320L258.5,320L258.5,320L221.5,320L221.5,320L184.6,320L184.6,320L147.7,320L147.7,320L110.8,320L110.8,320L73.8,320L73.8,320L36.9,320L36.9,320L0,320L0,320Z">
+            </path>
+        </svg>
+    </section>
+    <!-- akhir dari hero section -->
+
+    <!-- about section -->
+    <section class="hero is-medium is-white" id="tentang-saya">
+        <div class="container">
+            <div class="hero-body has-text-centered">
                 <p class="title">
-                    Half height hero
+                    Tentang
                 </p>
                 <p class="subtitle">
-                    Half height subtitle
+                    Medium subtitle
                 </p>
-            </div> -->
+                <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nisi deleniti
+                    voluptatum error doloribus provident ab odit, facere pariatur alias, voluptas earum voluptates
+                    recusandae eum libero eligendi. Itaque, hic deserunt.</p>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#485fc7" fill-opacity="1"
+                d="M0,96L0,192L38.9,192L38.9,288L77.8,288L77.8,192L116.8,192L116.8,128L155.7,128L155.7,320L194.6,320L194.6,288L233.5,288L233.5,32L272.4,32L272.4,128L311.4,128L311.4,256L350.3,256L350.3,288L389.2,288L389.2,192L428.1,192L428.1,32L467,32L467,320L505.9,320L505.9,256L544.9,256L544.9,224L583.8,224L583.8,64L622.7,64L622.7,0L661.6,0L661.6,224L700.5,224L700.5,224L739.5,224L739.5,288L778.4,288L778.4,64L817.3,64L817.3,32L856.2,32L856.2,288L895.1,288L895.1,64L934.1,64L934.1,192L973,192L973,96L1011.9,96L1011.9,128L1050.8,128L1050.8,256L1089.7,256L1089.7,224L1128.6,224L1128.6,224L1167.6,224L1167.6,256L1206.5,256L1206.5,192L1245.4,192L1245.4,64L1284.3,64L1284.3,32L1323.2,32L1323.2,96L1362.2,96L1362.2,224L1401.1,224L1401.1,224L1440,224L1440,320L1401.1,320L1401.1,320L1362.2,320L1362.2,320L1323.2,320L1323.2,320L1284.3,320L1284.3,320L1245.4,320L1245.4,320L1206.5,320L1206.5,320L1167.6,320L1167.6,320L1128.6,320L1128.6,320L1089.7,320L1089.7,320L1050.8,320L1050.8,320L1011.9,320L1011.9,320L973,320L973,320L934.1,320L934.1,320L895.1,320L895.1,320L856.2,320L856.2,320L817.3,320L817.3,320L778.4,320L778.4,320L739.5,320L739.5,320L700.5,320L700.5,320L661.6,320L661.6,320L622.7,320L622.7,320L583.8,320L583.8,320L544.9,320L544.9,320L505.9,320L505.9,320L467,320L467,320L428.1,320L428.1,320L389.2,320L389.2,320L350.3,320L350.3,320L311.4,320L311.4,320L272.4,320L272.4,320L233.5,320L233.5,320L194.6,320L194.6,320L155.7,320L155.7,320L116.8,320L116.8,320L77.8,320L77.8,320L38.9,320L38.9,320L0,320L0,320Z">
+            </path>
+        </svg>
+    </section>
+    <!-- bagian akhir about section -->
+
+    <!-- project section -->
+    <section class="hero is-large is-link">
+        <div class="container">
+            <div class="hero-body">
+                <div class="has-text-centered mb-5">
+                    <p class="title">
+                        Medium hero
+                    </p>
+                    <p class="subtitle">
+                        Medium subtitle
+                    </p>
+                </div>
+                <!-- kolom untuk project -->
+                <div class="columns">
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="assets/img/DSC_0491.webp"
+                                        alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                                    <a href="#">#css</a> <a href="#">#responsive</a>
+                                    <br>
+                                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="https://bulma.io/images/placeholders/1280x960.png"
+                                        alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                
+                                <div class="content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                                    <a href="#">#css</a> <a href="#">#responsive</a>
+                                    <br>
+                                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
         </div>
     </section>
-
+    <!-- akhir dari project section -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
@@ -141,6 +206,8 @@
 
         });
     </script>
+    <!-- uikit js -->
+    <!-- <script src="assets/uikit-3.7/js/uikit.min.js"></script> -->
 </body>
 
 </html>
