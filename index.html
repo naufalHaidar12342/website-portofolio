@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- bulma css -->
+    <link type="text/css" rel="stylesheet" href="/assets/bulma/css/bulma.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website satu halaman berisi profil saya.">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- navbar -->
+
+    <!-- hero section/jumbotron -->
+    <nav class="navbar is-link" role="navigation" aria-label="main navigation">
+        <div class="container">
+
+            <div class="navbar-brand is-uppercase">
+                <a class="navbar-item" href="">
+                    <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> -->
+                    naufal
+
+                </a>
+
+                <!-- mobile navbar -->
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item">
+                        Home
+                    </a>
+
+                    <a class="navbar-item">
+                        Documentation
+                    </a>
+                    <!-- dropdown di dalam navbar -->
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            More
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item">
+                                About
+                            </a>
+                            <a class="navbar-item">
+                                Jobs
+                            </a>
+                            <a class="navbar-item">
+                                Contact
+                            </a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item">
+                                Report an issue
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary">
+                                <strong>Sign up</strong>
+                            </a>
+                            <a class="button is-light">Log in</a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+    </nav>
+    <section class="hero is-link is-halfheight">
+        <div class="hero-body">
+            <div class="container has-text-centered ">
+
+                <img loading="lazy" class="mb-2" src="assets/img/DSC_0491.webp" width="300" height="300" style="width: 300px; height: 300px; border-radius: 50%;">
+
+                <p class="title">
+                    Half height hero
+                </p>
+                <p class="subtitle">
+                    Half height subtitle
+                </p>
+            </div>
+            <!-- <div class="container has-text-centered">
+                <p class="title">
+                    Half height hero
+                </p>
+                <p class="subtitle">
+                    Half height subtitle
+                </p>
+            </div> -->
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
+</body>
+
+</html>
