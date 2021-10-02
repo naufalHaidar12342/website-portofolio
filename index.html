@@ -9,14 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 
     <!-- bulma css -->
-    <link type="text/css" rel="stylesheet" href="/assets/bulma/css/bulma.min.css" />
+    <link type="text/css" rel="stylesheet" href="/assets/bulma-css/css/bulma.min.css" />
 
     <!-- animate.css untuk animasi website -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+    <!-- animate on scroll untuk animasi ketika scroll halaman -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- link fontawesome  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- bulma extension css for tooltips -->
+    <link rel="stylesheet" href="assets/bulma-tooltips/dist/bulma-tooltip.min.css">
     <!-- custom styling -->
     <link type="text/css" rel="stylesheet" href="assets/styling.css" />
     <meta charset="UTF-8">
@@ -32,13 +37,11 @@
         <div class="container">
             <div class="navbar-brand is-uppercase">
                 <a class="navbar-item" href="#beranda">
-                    <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> -->
                     Naufal
                 </a>
 
                 <!-- hamburger menu untuk mobile device -->
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                    data-target="navigation-bar">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navigation-bar">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -77,17 +80,18 @@
     <!-- hero section/jumbotron -->
     <section class="hero is-link is-halfheight">
         <div class="hero-body">
-            <div class="container has-text-centered ">
+            <div class="container has-text-centered animate__animated animate__fadeInUp
+            animate__animated animate__fadeInUp">
                 <!-- profile picture -->
-                <img loading="lazy" class="mb-2 animate__animated animate__fadeInUp" src="assets/img/DSC_0491.webp" width="200" height="200" style="width: 200px; height: 200px; border-radius: 50%;">
-                
-                <div class="description animate__animated animate__fadeInUp">
+                <img loading="lazy" class="mb-2 " src="assets/img/DSC_0491.webp" width="200" height="200" style="width: 200px; height: 200px; border-radius: 50%;">
+
+                <div class="description ">
 
                     <!-- nama -->
                     <p class="title is-capitalized pb-2">
                         Naufal Haidar
                     </p>
-    
+
                     <!-- profesi -->
                     <p class="subtitle">
                         Mahasiswa
@@ -97,7 +101,7 @@
 
         </div>
 
-        <!-- motif gelombang -->
+        <!-- motif potongan kotak -->
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#fff" fill-opacity="1"
                 d="M0,256L0,256L36.9,256L36.9,96L73.8,96L73.8,128L110.8,128L110.8,192L147.7,192L147.7,224L184.6,224L184.6,224L221.5,224L221.5,224L258.5,224L258.5,192L295.4,192L295.4,192L332.3,192L332.3,0L369.2,0L369.2,32L406.2,32L406.2,96L443.1,96L443.1,224L480,224L480,96L516.9,96L516.9,192L553.8,192L553.8,32L590.8,32L590.8,320L627.7,320L627.7,256L664.6,256L664.6,320L701.5,320L701.5,224L738.5,224L738.5,128L775.4,128L775.4,32L812.3,32L812.3,128L849.2,128L849.2,64L886.2,64L886.2,192L923.1,192L923.1,288L960,288L960,256L996.9,256L996.9,224L1033.8,224L1033.8,192L1070.8,192L1070.8,160L1107.7,160L1107.7,32L1144.6,32L1144.6,0L1181.5,0L1181.5,192L1218.5,192L1218.5,128L1255.4,128L1255.4,160L1292.3,160L1292.3,96L1329.2,96L1329.2,160L1366.2,160L1366.2,128L1403.1,128L1403.1,96L1440,96L1440,320L1403.1,320L1403.1,320L1366.2,320L1366.2,320L1329.2,320L1329.2,320L1292.3,320L1292.3,320L1255.4,320L1255.4,320L1218.5,320L1218.5,320L1181.5,320L1181.5,320L1144.6,320L1144.6,320L1107.7,320L1107.7,320L1070.8,320L1070.8,320L1033.8,320L1033.8,320L996.9,320L996.9,320L960,320L960,320L923.1,320L923.1,320L886.2,320L886.2,320L849.2,320L849.2,320L812.3,320L812.3,320L775.4,320L775.4,320L738.5,320L738.5,320L701.5,320L701.5,320L664.6,320L664.6,320L627.7,320L627.7,320L590.8,320L590.8,320L553.8,320L553.8,320L516.9,320L516.9,320L480,320L480,320L443.1,320L443.1,320L406.2,320L406.2,320L369.2,320L369.2,320L332.3,320L332.3,320L295.4,320L295.4,320L258.5,320L258.5,320L221.5,320L221.5,320L184.6,320L184.6,320L147.7,320L147.7,320L110.8,320L110.8,320L73.8,320L73.8,320L36.9,320L36.9,320L0,320L0,320Z">
@@ -111,17 +115,17 @@
         <div class="container">
             <div class="hero-body has-text-centered">
                 <p class="title">
-                    Tentang
+                    Tentang.
                 </p>
-                <p class="subtitle">
-                    Profil singkat saya.
-                </p>
-                <p class="subtitle">
-                    Saya adalah seorang mahasiswa jurusan Teknik Informatika Universitas Dian Nuswantoro Semarang.
-                </p>
-                <p class="subtitle">
-                    Saat ini sedang mendalami bahasa pemrograman <i>PHP</i> dan database tipe <i>SQL</i>.
-                </p>
+                <div class="content">
+                    <p class="subtitle">
+                        Saya adalah seorang mahasiswa jurusan Teknik Informatika Universitas Dian Nuswantoro Semarang. Saat ini sedang mendalami bahasa pemrograman <i>PHP</i> dan database tipe <i>SQL</i>.
+                    </p>
+                    <p class="subtitle">
+                        Di samping kegiatan belajar, saya suka menyempatkan diri untuk bermain game.
+                    </p>
+                </div>
+
             </div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -141,7 +145,10 @@
                         Karya.
                     </p>
                     <p class="subtitle" style="color: #fff;">
-                        Beberapa karya yang pernah saya buat.
+                        Karya yang pernah saya buat.
+                    </p>
+                    <p class="subtitle" style="color: #fff;">
+                        Karya yang pernah saya buat.
                     </p>
 
                 </div>
@@ -150,56 +157,29 @@
                     <div class="column">
                         <div class="card">
                             <div class="card-image">
-                                <figure class="image is-4by3">
-                                    <img src="assets/img/DSC_0491.webp" alt="Placeholder image">
+                                <figure class="image is-5by3">
+                                    <img src="assets/img/kanalgames-snapshot.webp" alt="KanalGame-screenshot">
                                 </figure>
                             </div>
+
                             <div class="card-header">
                                 <a class="card-header-title ">
-                                    Kanal Games
+                                    Kanal Game
                                 </a>
                             </div>
                             <div class="card-content">
-
-                                <div class="content">
-                                    Kanal Games termasuk website yang menyajikan artikel berisi informasi dari game yang
-                                    diunggah. Untuk saat ini, pengguna dapat mengunjungi toko digital yang menyediakan
-                                    game tersebut serta membaca latar cerita di dalam game tersebut.
-                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatem dolore beatae rerum. Quibusdam consequuntur, dolore minima harum dolores tempora ipsum nulla earum nobis iste? Fugit adipisci vero tenetur aspernatur?</p>
                             </div>
+
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="card">
-                            <div class="card-image">
-                                <figure class="image is-4by3">
-                                    <img src="https://bulma.io/images/placeholders/1280x960.png"
-                                        alt="Placeholder image">
-                                </figure>
-                            </div>
-                            <div class="card-header">
-                                <p class="card-header-title">
-                                    Sistem Inventarisasi Barang
-                                </p>
-                            </div>
-                            <div class="card-content">
-                                <div class="content">
-                                    <p>
-                                        Website ini bisa disebut sebuah aplikasi berbasis web. Aplikasi ini menjalankan
-                                        sistem CRUD (Create, Read , Update, Delete) untuk mengelola database. Bahasa
-                                        pemrograman yang digunakan adalah PHP dan database bertipe SQL
-                                    </p>
 
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
 
             </div>
         </div>
+        <!-- motif potongan kotak -->
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#fff" fill-opacity="1"
                 d="M0,192L0,32L160,32L160,256L320,256L320,160L480,160L480,192L640,192L640,96L800,96L800,224L960,224L960,288L1120,288L1120,192L1280,192L1280,224L1440,224L1440,320L1280,320L1280,320L1120,320L1120,320L960,320L960,320L800,320L800,320L640,320L640,320L480,320L480,320L320,320L320,320L160,320L160,320L0,320L0,320Z">
@@ -213,37 +193,122 @@
         <div class="container">
             <div class="hero-body has-text-centered">
                 <p class="title">
-                    Kontak
+                    Kontak.
                 </p>
+                <div class="columns">
+                    <div class="column">
 
-                <div class="card">
+                        <div class="box">
+                            <article class="media">
+                                <div class="media-left">
+                                    <figure class="image is-64x64">
+                                        <img src="assets/img/github-brands.svg" alt="github-logo">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <div class="content">
+                                        <p class="has-text-left">
+                                            <strong>Naufal Haidar</strong>
+                                            <small>naufalHaidar12342</small>
+                                            <br>
+                                            <i>GitHub</i> adalah layanan hosting untuk menyimpan, berbagi, serta bekerja sama dalam mengembangkan aplikasi. Pendek kata, <i>GitHub</i> bisa dibilang seperti <i>Google Drive</i> tapi untuk developer dan programmer.
+                                        </p>
+                                    </div>
+                                    <nav class="level is-mobile">
+                                        <div class="level-left">
+                                            <a class="level-item" aria-label="link" href="https://github.com/naufalHaidar12342" target="_blank" referrerpolicy="noreferrer">
+                                                <span class="icon is-small has-tooltip-arrow has-tooltip-bottom" data-tooltip="Kunjungi profil saya!">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </span>
+                                            </a>
+
+                                            <!-- Place this tag where you want the button to render. -->
+                                            <a class="github-button " href="https://github.com/naufalHaidar12342/website-portofolio" data-icon="octicon-star" data-show-count="true" aria-label="Star naufalHaidar12342/website-portofolio on GitHub" style="margin-top: 1px;">
+                                                Star
+                                            </a>
+
+                                            <!-- Place this tag where you want the button to render. -->
+                                            <a class="github-button" href="https://github.com/naufalHaidar12342" data-show-count="true" aria-label="Follow @naufalHaidar12342 on GitHub">Follow @naufalHaidar12342</a>
+                                            <!-- <a class="level-item" aria-label="retweet">
+                                                <span class="icon is-small">
+                                                    <i class="fas fa-retweet" aria-hidden="true"></i>
+                                                </span>
+                                            </a>
+                                            <a class="level-item" aria-label="like">
+                                                <span class="icon is-small">
+                                                    <i class="fas fa-heart" aria-hidden="true"></i>
+                                                </span>
+                                            </a> -->
+                                        </div>
+                                    </nav>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- kontak telegram -->
+                    <div class="column">
+
+                        <div class="box">
+                            <article class="media">
+                                <div class="media-left">
+                                    <figure class="image is-64x64">
+                                        <img src="assets/img/telegram-brands.svg" alt="telegram-logo">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <div class="content">
+                                        <p class="has-text-left">
+                                            <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+                                            <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                                        </p>
+                                    </div>
+                                    <nav class="level is-mobile">
+                                        <div class="level-left">
+                                            <a class="level-item" aria-label="reply">
+                                                <span class="icon is-small">
+                                                    <i class="fas fa-reply" aria-hidden="true"></i>
+                                                </span>
+                                            </a>
+                                            <a class="level-item" aria-label="retweet">
+                                                <span class="icon is-small">
+                                                    <i class="fas fa-retweet" aria-hidden="true"></i>
+                                                </span>
+                                            </a>
+                                            <a class="level-item" aria-label="like">
+                                                <span class="icon is-small">
+                                                    <i class="fas fa-heart" aria-hidden="true"></i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="card">
                     <div class="card-content">
                         <div class="content">
-                            <p>Berikut adalah kontak saya yang dapat dihubungi</p>
                             <p>
-                                <i class="fab fa-github mr-2"></i>
-                                Github : naufalHaidar12342
+                                <i class="fab fa-github mr-2"></i> Github : naufalHaidar12342
                             </p>
                             <p>
-                                <i class="fab fa-telegram-plane mr-2"></i>
-                                Telegram: Naufal Haidar
+                                <i class="fab fa-telegram-plane mr-2"></i> Telegram: Naufal Haidar
                             </p>
                         </div>
                     </div>
                     <footer class="card-footer">
-                        <a href="https://github.com/naufalHaidar12342" class="card-footer-item is-capitalized"
-                            target="_blank" referrerpolicy="no-referrer">
-                            <i class="fab fa-github mr-2"></i>
-                            GitHub
+                        <a href="https://github.com/naufalHaidar12342" class="card-footer-item is-capitalized" target="_blank" referrerpolicy="no-referrer">
+                            <i class="fab fa-github mr-2"></i> GitHub
                         </a>
-                        <a href="https://t.me/heydar12342" class="card-footer-item is-capitalized " target="_blank"
-                            referrerpolicy="no-referrer">
-                            <i class="fab fa-telegram-plane mr-2"></i>
-                            Telegram
+                        <a href="https://t.me/heydar12342" class="card-footer-item is-capitalized " target="_blank" referrerpolicy="no-referrer">
+                            <i class="fab fa-telegram-plane mr-2"></i> Telegram
                         </a>
 
                     </footer>
-                </div>
+                </div> -->
 
             </div>
         </div>
@@ -291,8 +356,14 @@
 
         });
     </script>
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <!-- github buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- uikit js -->
     <!-- <script src="assets/uikit-3.7/js/uikit.min.js"></script> -->
+
+
 </body>
 
 </html>
